@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Plans - Mobi Comm</title>
+    <!-- Link for SCSS styling -->
+    <link rel="stylesheet" href="/css/styleViewPlan3.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body style="font-family: sans-serif;">
+
+    <!-- Header Section -->
+    <header class="sticky-top">
+        <!-- Offer Slider (Sticky Top) -->
+        <section id="offer-slider" class="carousel slide bg-warning text-center" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="d-block w-100 m-2">Offer: Recharge 2GB at Rs.299</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100 m-2">5G at Rs.599</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100 m-2">2GB at Rs.299</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev mx-5" type="button" data-bs-target="#offer-slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next mx-5" type="button" data-bs-target="#offer-slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+            <div class="container-fluid">
+                <!-- Navbar Toggle (Left) -->
+                <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand Logo (Centered on Small Screens) -->
+                <a class="navbar-brand mx-auto mx-lg-0 mt-1" href="#home">
+                    <h1 class="ps-3 text-warning">MOBI COMM</h1>
+                </a>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav text-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="dashboard.html"><h6>Home</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="viewPlans.html"><h6>View Plans</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="support.html"><h6>Support</h6></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Search Icon (Right) -->
+                <form class="d-flex pe-2">
+                    <div class="input-group">
+                        <div class="input-container pe-3">
+                            <input type="search" id="scrollingPlaceholder" class="scrolling-input" placeholder="Search by popular plan" aria-label="Search">
+                            <button class="btn btn-outline-success rounded" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Profile Icon (Bootstrap Icons) -->
+                <div class="profile-icon pe-4 ps-1" onclick="openProfile();">
+                    <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb px-3">
+                <li class="breadcrumb-item"><a href="dashboard2.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="viewPlans.html">View Plans</a></li>
+            </ol>
+        </nav>
+
+        <!-- Recommended Plans Section -->
+        <section id="offers" class="container mt-5 mb-5">
+            <button class="btn btn-primary float-end d-flex align-items-center" 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#filterOffcanvas" 
+                    aria-controls="filterOffcanvas">
+                <h6 class="m-1">Filter</h6>
+                <img class="filter-icon img-fluid me-2 text-dark" src="assets/filter.png" alt="Filter Icon" width="20" height="20">
+            </button>
+            <h4 class="mb-4">Recommended Plans</h4>
+            <div class="row">
+                <div class="col-md-4 plan-card" data-price="299" data-validity="28">
+                    <article class="card shadow p-3">
+                        <h5><span class="badge bg-dark">2GB data</span> ₹299 Plan</h5>
+                        <p>2GB/day, 28 days</p>
+                        <a href="payment.html">
+                            <button type="button" class="btn btn-success">Recharge Now</button>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4 plan-card" data-price="499" data-validity="56">
+                    <article class="card shadow p-3">
+                        <h5><span class="badge bg-dark">3GB data</span> ₹499 Plan</h5>
+                        <p>3GB/day, 56 days</p>
+                        <a href="payment.html">
+                            <button type="button" class="btn btn-success">Recharge Now</button>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4 plan-card" data-price="499" data-validity="56">
+                    <article class="card shadow p-3">
+                        <h5><span class="badge bg-dark">3GB data</span> ₹499 Plan</h5>
+                        <p>3GB/day, 56 days</p>
+                        <a href="payment.html">
+                            <button type="button" class="btn btn-success">Recharge Now</button>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Plan Tabs -->
+            <ul class="nav nav-tabs mt-5" id="planTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#popular">Popular Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#unlimited">Unlimited Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#5G">5G Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#data">Data Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#validity">Validity Plans</a>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-5">
+                <!-- Popular Plans -->
+                <div class="tab-pane fade show active" id="popular">
+                    <div class="row" id="planCards">
+                        <div class="col-md-4">
+                            <article class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹299 Plan</h5>
+                                    <p class="card-text">1.5GB/day, 28 days validity</p>
+                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#planModal299">
+                                        Plan Details
+                                    </button>
+                                    <button class="btn btn-success select-plan" data-plan="₹299 - 1.5GB/day, 28 days">Select</button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Repeat for other plans -->
+                    </div>
+                </div>
+
+                <!-- Unlimited Plans -->
+                <div class="tab-pane fade" id="unlimited">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹699 Plan</h5>
+                                    <p class="card-text">2GB/day, Unlimited</p>
+                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#planModal699">
+                                        Plan Details
+                                    </button>
+                                    <button class="btn btn-success select-plan" data-plan="₹699 - 2GB/day, unlimited">Select</button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Repeat for other plans -->
+                    </div>
+                </div>
+
+                <!-- 5G Plans -->
+                <div class="tab-pane fade" id="5G">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹98 Data Pack</h5>
+                                    <p class="card-text">6GB total data, 28 days</p>
+                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#planModal98">
+                                        Plan Details
+                                    </button>
+                                    <button class="btn btn-success select-plan" data-plan="₹98 - 6GB total, 28 days">Select</button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Repeat for other plans -->
+                    </div>
+                </div>
+
+                <!-- Data Plans -->
+                <div class="tab-pane fade" id="data">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹98 Data Pack</h5>
+                                    <p class="card-text">6GB total data, 28 days</p>
+                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#planModal98">
+                                        Plan Details
+                                    </button>
+                                    <button class="btn btn-success select-plan" data-plan="₹98 - 6GB total, 28 days">Select</button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Repeat for other plans -->
+                    </div>
+                </div>
+
+                <!-- Validity Plans -->
+                <div class="tab-pane fade" id="validity">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">₹599 Plan</h5>
+                                    <p class="card-text">1.5GB/day, 84 days validity</p>
+                                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#planModal599">
+                                        Plan Details
+                                    </button>
+                                    <button class="btn btn-success select-plan" data-plan="₹599 - 1.5GB/day, 84 days">Select</button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Repeat for other plans -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-warning text-dark pt-5 mt-5">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col">
+                    <h3 class="fw-bold">Mobi Comm</h3>
+                    <p class="pt-2">Quick and secure mobile recharge platform</p>
+                    <p class="mb-2">0987654321</p>
+                </div>
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled pt-2">
+                        <li><a href="dashboard2.html" class="text-dark text-decoration-none">Home</a></li>
+                        <li><a href="viewPlans.html" class="text-dark text-decoration-none">Plans</a></li>
+                        <li><a href="support.html" class="text-dark text-decoration-none">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Support</h4>
+                    <ul class="list-unstyled pt-2">
+                        <li>Help Center</li>
+                        <li>Contact Us</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Connect With Us</h4>
+                    <div class="social-media pt-2">
+                        <li><strong>Email:</strong> support@mobicomm.com</li>
+                        <li><strong>Phone:</strong> +91 98765 43210</li>
+                        <li><strong>Live Chat:</strong> Available 24/7</li>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-sm-flex justify-content-between py-1">
+                <p>2023 © Mobi Comm. All Rights Reserved.</p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none pe-4">Terms of Use</a>
+                    <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Redirect to payment page on plan selection
+        document.querySelectorAll('.select-plan').forEach(button => {
+            button.addEventListener('click', function () {
+                window.location.href = "payment.html";
+            });
+        });
+
+        // Filter plans based on search, price, and validity
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const priceFilter = document.getElementById("priceFilter");
+            const validityFilter = document.getElementById("validityFilter");
+            const planCards = document.querySelectorAll(".plan-card");
+
+            function filterPlans() {
+                const searchQuery = searchInput.value.toLowerCase();
+                const selectedPrice = priceFilter.value;
+                const selectedValidity = validityFilter.value;
+
+                planCards.forEach(card => {
+                    const price = card.getAttribute("data-price");
+                    const validity = card.getAttribute("data-validity");
+                    const title = card.querySelector("h5").textContent.toLowerCase();
+
+                    const matchesSearch = title.includes(searchQuery);
+                    const matchesPrice = selectedPrice ? price === selectedPrice : true;
+                    const matchesValidity = selectedValidity ? validity === selectedValidity : true;
+
+                    if (matchesSearch && matchesPrice && matchesValidity) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            searchInput.addEventListener("input", filterPlans);
+            priceFilter.addEventListener("change", filterPlans);
+            validityFilter.addEventListener("change", filterPlans);
+        });
+
+        // Scroll placeholder text
+        let placeholderText = "Search for popular Plan  |  Unlimited Plan | Validity Plan | ";
+        let currentIndex = 0;
+
+        function scrollPlaceholder() {
+            let inputField = document.getElementById("scrollingPlaceholder");
+            inputField.placeholder = placeholderText.substring(currentIndex) + placeholderText.substring(0, currentIndex);
+            currentIndex = (currentIndex + 1) % placeholderText.length;
+        }
+
+        setInterval(scrollPlaceholder, 300);
+
+        // Redirect to profile page
+        function openProfile() {
+            window.location.href = "profile.html";
+        }
+    </script>
+</body>
+</html>

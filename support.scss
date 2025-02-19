@@ -1,0 +1,63 @@
+$warning: #FFA09B;
+$primary:rgb(104, 99, 99);
+$success: #FFA09B;
+.body-item{
+    // background: #F4EFFC;
+    
+}
+#carouselExampleFade{ 
+    background-color: $primary;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+}
+.card{
+    // background-color: #F3E8E5;
+    background-color:  #FFF0EE;
+}
+
+.card-body{
+    background-color:  #FFF0EE;
+}
+.card-outer{
+    background-color:  #FFF0EE;
+}
+
+// Carousel Image Styling
+.img {
+    height: 300px;  // Adjust height as needed
+    object-fit: cover;  // Ensures images fit well
+    padding: 10px;
+}
+
+// Carousel Controls Styling (Optional)
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) brightness(0);  // Makes the icons slightly gray/black
+    transform: scale(0.6);
+}
+
+
+
+
+
+.container {
+    .info {
+        border-left: 3px solid black;  // Left border for the text section
+        padding-left: 20px;            // Space between text and border
+    }
+
+    .title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .styled-img {
+        width: 80%;         // Adjust width as per requirement
+        max-width: 350px;   // Prevents the image from getting too big
+        border-radius: 10px; // Rounded corners
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); // Soft shadow
+        display: block;
+        margin: auto;
+    }
+}
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss" ;

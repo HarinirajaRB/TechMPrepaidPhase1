@@ -1,0 +1,85 @@
+// styles.scss
+
+$primary-color: #FFA09B;
+$secondary-color: #6c757d;
+$card-hover-color: #f0f0f0;
+$transition-time: 0.3s;
+$modal-bg: rgba(0, 0, 0, 0.5);
+
+// Global Styling
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+// Card Styling for Plans
+.card {
+  transition: background-color $transition-time ease;
+  &:hover {
+    background-color: $card-hover-color;
+  }
+}
+
+// Card Body for Each Plan
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+  .card-title {
+    font-size: 1.2rem;
+    color: $primary-color;
+  }
+  .card-text {
+    font-size: 1rem;
+    color: $secondary-color;
+  }
+  .btn {
+    transition: all $transition-time ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Price Range Label and Display
+#priceValue {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+// Filter Sidebar
+#filterForm {
+  .form-label {
+    font-weight: bold;
+    color: $primary-color;
+  }
+  .form-select, .form-range {
+    margin-bottom: 1rem;
+  }
+}
+
+// Modal Styling for Plan Details
+.modal-body {
+  font-size: 1rem;
+  color: #333;
+  background-color: $modal-bg;
+  color: white;
+}
+
+// Smooth Animations
+.plan-card {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss" ;

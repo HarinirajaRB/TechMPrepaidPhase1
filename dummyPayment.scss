@@ -1,0 +1,92 @@
+$primary:#FFA09B;
+$success: #FFA09B;
+$warning: #FFA09B;
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.body-item{
+  background-color:  #FFF0EE;
+}
+
+
+// Body Styling
+body {
+    background: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+// Login Container
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+// Login Box
+.login-box {
+    background: $primary-color;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    
+    h2 {
+        color: $text-color;
+    }
+
+    .input-group-text {
+        background: darken($primary-color, 10%);
+        color: $text-color;
+        border: none;
+    }
+
+    .form-control {
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .password-toggle {
+        cursor: pointer;
+    }
+
+    button {
+        background: lighten($primary-color, 10%);
+        border: none;
+        transition: background 0.3s;
+        
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+
+    p a {
+        color: $text-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Animation
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+// Responsive
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+    }
+}
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";

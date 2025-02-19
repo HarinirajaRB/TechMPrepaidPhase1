@@ -1,0 +1,192 @@
+// General container padding and margin adjustments
+#viewPlans {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  
+    .filter-icon {
+      transition: transform 0.3s ease;
+    }
+  
+    .offcanvas-header {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-bottom: 1px solid #dee2e6;
+  
+      h5 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  
+    .offcanvas-body {
+      padding: 15px;
+  
+      .form-check-input {
+        margin-top: 0.5rem;
+      }
+  
+      .input-group {
+        margin-top: 15px;
+        input {
+          width: 60px;
+        }
+      }
+  
+      h6 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+  
+      button#applyFilters {
+        background-color: #007bff;
+        color: #fff;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  
+    .offcanvas-body .mb-3 {
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+  }
+  
+  // Plan Cards Styles
+  #planCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    .plan-card {
+      flex: 1 0 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+      
+      .card {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+  
+        &:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+  
+        .card-title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #007bff;
+          margin-bottom: 10px;
+        }
+  
+        .card-text {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 15px;
+        }
+  
+        button {
+          width: 100%;
+          background-color: #28a745;
+          color: #fff;
+          padding: 12px 0;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          
+          &:hover {
+            background-color: #218838;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .plan-card {
+        flex: 1 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .plan-card {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  
+  // Filter Modal (offcanvas)
+  .offcanvas-body {
+    background-color: #f7f7f7;
+    padding: 20px;
+  
+    .form-check {
+      margin-bottom: 10px;
+    }
+  
+    .form-range {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .form-check-label {
+      font-size: 14px;
+      color: #333;
+    }
+  
+    .input-group-text {
+      background-color: #f0f0f0;
+      border-color: #ccc;
+    }
+  
+    .input-group input {
+      border-radius: 4px;
+    }
+  
+    .offcanvas-header {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  
+  // Button Styles
+  button.btn-close {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    &:hover {
+      color: #007bff;
+    }
+  }
+  
+  // Plan filter and sorting component styles
+  .form-check {
+    padding: 5px 0;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+  }
+  
+  #priceRange {
+    margin-bottom: 10px;
+  }
+  
+@import "./node_modules/bootstrap/scss/bootstrap.scss" ;
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="/css/mobile.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body class="body-item" style="font-family: sans-serif;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light sticky-top shadow bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <strong><h2 class="ps-3 text-light">MOBI COMM</h2></strong>
+            </a>
+            <a class="navbar-brand text-light" href="support">
+                <strong><h5>Support</h5></strong>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Payment Form -->
+    <div class="container d-flex justify-content-center mt-4">
+        <div class="card mt-5 mb-5" style="width: 28rem;">
+            <div class="card-body">
+                <h3 class="card-title text-center py-3"><b>Payment Details</b></h3>
+                <form id="paymentForm" class="needs-validation" novalidate>
+                    <!-- Mobile Number Input -->
+                    <div class="mb-3">
+                        <label for="mobileNumber" class="form-label"><b>Mobile Number</b></label>
+                        <input type="tel" class="form-control" id="mobileNumber text-light" placeholder="Enter 10-digit prepaid mobile number" required>
+                        <div class="invalid-feedback">Mobile number must start with 9 or 8 and be exactly 10 digits.</div>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><b>Email Address</b></label>
+                        <input type="email" class="form-control text-light" id="email" placeholder="eg: abc@gmail.com"  required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    
+                    <label for=""><b>Payment Method</b></label>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="bi bi-credit-card fs-4 text-danger pe-3"></i>Credit/Debit
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="bi bi-wallet2 fs-4 text-primary pe-3"></i>UPI Transaction
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="bi bi-bank fs-4 text-success pe-3"></i>Bank Transfer
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <!-- Checkbox -->
+                    <div class="mb-3 form-check pt-2">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                        <label class="form-check-label" for="termsCheck"><b>Agree to terms and conditions</b></label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="successModalLabel">Payment Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your payment has been successfully processed.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+<footer class="bg-warning text-dark pt-5 mt-4">
+    <div class="container px-5">
+        <div class="row">
+            <div class="col">
+                <h3 class="fw-bold">Mobi Comm</h3>
+                <p class="pt-2">Quick and secure mobile recharge platform</p>
+                <p class="mb-2">0987654321</p>
+            </div>
+            <div class="col">
+                <h4>Quick links</h4>
+                <ul class="list-unstyled pt-2">
+                    <li class="py-1">Home</li>
+                    <li class="py-1">Plans</li>
+                    <li class="py-1">Support</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Support</h4>
+                <ul class="list-unstyled pt-2">
+                    <li class="py-1">Help Center</li>
+                    <li class="py-1">Contact Us</li>
+                    <li class="py-1">FAQs</li>
+                </ul>
+            </div>
+           
+            <div class="col">
+                <h4>Connect With Us</h4>
+                <!-- <div class="social-media pt-2">
+                    <a href="#" class="text-light fs-2 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light fs-2 me-3"><i class="bi bi-pinterest"></i></a>
+                    <a href="#" class="text-light fs-2 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-light fs-2"><i class="bi bi-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>
+        <hr>
+        <div class="d-sm-flex justify-content-between py-1">
+            <p>2025 © Mobi Comm. All Rights Reserved. </p>
+            <p>
+                <a href="#" class="text-light text-decoration-none pe-4">Terms of use</a>
+                <a href="#" class="text-light text-decoration-none"> Privacy policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+            event.stopPropagation();
+
+            let isValid = true;
+            let form = event.target;
+            
+            // Mobile number validation
+            let mobileNumber = document.getElementById("mobileNumber");
+            let mobilePattern = /^[89]\d{9}$/; // Starts with 8 or 9, exactly 10 digits
+
+            if (!mobilePattern.test(mobileNumber.value.trim())) {
+                mobileNumber.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                mobileNumber.classList.remove("is-invalid");
+                mobileNumber.classList.add("is-valid");
+            }
+
+            // Email validation
+            let email = document.getElementById("email");
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailPattern.test(email.value.trim())) {
+                email.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                email.classList.remove("is-invalid");
+                email.classList.add("is-valid");
+            }
+
+            // Checkbox validation
+            let termsCheck = document.getElementById("termsCheck");
+            if (!termsCheck.checked) {
+                termsCheck.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                termsCheck.classList.remove("is-invalid");
+                termsCheck.classList.add("is-valid");
+            }
+
+            // Add Bootstrap validation class
+            form.classList.add("was-validated");
+
+            // If all fields are valid, show the success modal
+            if (isValid) {
+                let successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            }
+        });
+    </script>
+    <!-- script from bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

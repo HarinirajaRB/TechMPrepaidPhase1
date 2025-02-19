@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Mobile Prepaid</title>
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="css/profile.min.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- style for x icon -->
+    <style>
+        /* Additional styles to position the close button at the top right */
+        .close-top-right {
+            position: fixed;
+            top: 5px;
+            right: 30px;
+            z-index: 1050;
+            background: transparent;
+            border: none;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Close Button at Top Right Corner -->
+    <button type="button" class="close close-top-right" aria-label="Close" onclick="closePage();">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    
+
+<div class="container mt-5">
+    <!-- Profile Header -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>User Profile</h2>
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+            <i class="bi bi-pencil-square"></i> Edit
+        </button>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="card shadow mt-4">
+        <div class="card-body text-center">
+            <h4>Harini Raja</h4>
+            <p class="text-muted">+91 98765 43210</p>
+            <p class="text-muted">Active Plan: ₹299 - 1.5GB/day, 28 days</p>
+            <!-- <p class="text-muted">Balance: ₹100</p> -->
+            
+            <!-- Usage Stats -->
+            <div class="d-flex justify-content-around mt-3">
+                <!-- gutter for data used and validity -->
+                <div class="container px-4">
+                    <div class="row gx-5">
+                      <div class="col">
+                       <div class="p-3 border bg-light">
+                        <h5>Data Used</h5>
+                    <p>10GB/42GB</p>
+                       </div>
+                      </div>
+                      <div class="col">
+                        <div class="p-3 border bg-light">
+                            <h5>Validity</h5>
+                    <p>15 days remaining</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- Button to Recharge -->
+            <a href="viewPlans.html">
+                <button class="btn btn-success mt-3">Recharge Now</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Subscription History Section -->
+    <div class="mt-5">
+        <h4>Subscription History</h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>₹299 Plan</strong> - 1.5GB/day, 28 days validity <br> <small>Subscribed on: 10th Feb 2025</small>
+            </li>
+            <li class="list-group-item">
+                <strong>₹499 Plan</strong> - 2GB/day, 56 days validity <br> <small>Subscribed on: 15th Jan 2025</small>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Edit Profile Form -->
+                <form>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="userName" value="Harini Raja" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userPhone" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="userPhone" value="+91 98765 43210" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="userEmail" value="hariniraja@example.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- script for closing icon redirecting to home page -->
+<script>
+    function closePage() {
+        window.location.href = "dashboard2.html"; // Redirect to a dashboard2 page
+    }
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

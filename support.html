@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Mobile Recharge</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/support.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg bg-light shadow-lg px-5">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto mx-lg-0" href="#">
+                <b><h2 class="ps-3 text-warning">MOBI COMM</h2></b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Support</h2>
+
+        <!-- Help Center Section -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h4>Help Center</h4>
+                <p>If you have any issues related to recharges, payments, or account access, visit our Help Center for solutions.</p>
+                <a href="#helpCenterContent" class="btn btn-primary" data-bs-toggle="collapse">Go to Help Center</a>
+                <div id="helpCenterContent" class="collapse mt-3">
+                    <h5>Common Issues</h5>
+                    <ul>
+                        <li>Recharge not reflecting? <a href="#">Click here</a></li>
+                        <li>Payment failed but amount deducted? <a href="#">Click here</a></li>
+                        <li>Unable to login? <a href="#">Click here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h4>Contact Us</h4>
+                <p>Need further assistance? Contact our support team.</p>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@mobilerecharge.com</li>
+                    <li><strong>Phone:</strong> +91 98765 43210</li>
+                    <li><strong>Live Chat:</strong> Available 24/7</li>
+                </ul>
+                <a href="#contactForm" class="btn btn-primary" data-bs-toggle="collapse">Contact Support</a>
+                <div id="contactForm" class="collapse mt-3">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4>FAQs</h4>
+                <p>Find answers to common questions related to mobile recharges.</p>
+                <a href="#faqsContent" class="btn btn-primary" data-bs-toggle="collapse">View FAQs</a>
+                <div id="faqsContent" class="collapse mt-3">
+                    <h5>Frequently Asked Questions</h5>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How do I recharge my mobile?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Go to the recharge section, enter your mobile number, select a plan, and proceed to payment.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    What payment methods are accepted?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We accept credit/debit cards, UPI, and net banking.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    How long does it take for the recharge to reflect?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Recharges are usually instant but may take up to 15 minutes in rare cases.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-warning pt-5 mt-5">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="fw-bold">Mobi Comm</h3>
+                    <p class="pt-2">Quick and secure mobile recharge platform</p>
+                    <p class="mb-2">0987654321</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled pt-2">
+                        <li><a href="mobilePrepaid.html" class="text-dark text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Plans</a></li>
+                        <li><a href="support.html" class="text-dark text-decoration-none">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Support</h4>
+                    <ul class="list-unstyled pt-2">
+                        <li><a href="#helpCenterContent" class="text-dark text-decoration-none">Help Center</a></li>
+                        <li><a href="#contactForm" class="text-dark text-decoration-none">Contact Us</a></li>
+                        <li><a href="#faqsContent" class="text-dark text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Connect With Us</h4>
+                    <div class="social-media pt-2">
+                        <a href="#" class="text-dark fs-2 me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark fs-2 me-3"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="text-dark fs-2 me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark fs-2"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-sm-flex justify-content-between py-1">
+                <p>2025 © Mobi Comm. All Rights Reserved.</p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none pe-4">Terms of Use</a>
+                    <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

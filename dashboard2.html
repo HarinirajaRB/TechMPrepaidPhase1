@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Mobi Comm</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/styleDashboard2.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body style="font-family: sans-serif;">
+
+    <!-- Header Section -->
+    <header class="sticky-top">
+        <!-- Offer Slider (Sticky Top) -->
+        <section id="offer-slider" class="carousel slide bg-warning text-center" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="d-block w-100 m-2">Offer: Recharge 2GB at Rs.299</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100 m-2">5G at Rs.599</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="d-block w-100 m-2">2GB at Rs.299</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev mx-5" type="button" data-bs-target="#offer-slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next mx-5" type="button" data-bs-target="#offer-slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+            <div class="container-fluid">
+                <!-- Navbar Toggle (Left) -->
+                <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand Logo (Centered on Small Screens) -->
+                <a class="navbar-brand mx-auto mx-lg-0 mt-1" href="#home">
+                    <h1 class="ps-3 text-warning">MOBI COMM</h1>
+                </a>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav text-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="dashboard2.html"><h6>Home</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="viewPlans.html"><h6>View Plans</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark nav-hover" href="support.html"><h6>Support</h6></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Search Icon (Right) -->
+                <form class="d-flex pe-2">
+                    <div class="input-group">
+                        <div class="input-container pe-3">
+                            <input type="search" id="scrollingPlaceholder" class="scrolling-input" placeholder="Search by popular plan" aria-label="Search">
+                            <button class="btn btn-outline-success rounded" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Profile Icon (Bootstrap Icons) -->
+                <div class="profile-icon pe-4 ps-1" onclick="openProfile();">
+                    <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb px-3">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+            </ol>
+        </nav>
+
+        <!-- Banner Section -->
+        <section id="banner" class="carousel slide carousel-fade shadow-lg mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/bannerImage3.png" class="img d-block w-100" alt="Banner Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/bannerImage1.png" class="img d-block w-100" alt="Banner Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/bannerImage3.png" class="img d-block w-100" alt="Banner Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev mx-5" type="button" data-bs-target="#banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next mx-5" type="button" data-bs-target="#banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="container text-center mt-5 mb-5">
+            <h1 class="fw-bold text-info mt-5">Recharge Your Mobile Instantly</h1>
+            <p class="lead">Find the best prepaid plans for your needs</p>
+            <a href="viewPlans.html" class="btn btn-warning btn-lg mb-5">View Plans</a>
+        </section>
+
+        <!-- Exclusive Offers Section -->
+        <section id="offers" class="container mt-5 mb-5">
+            <h2 class="text-center text-info mt-5 mb-5">Exclusive Offers</h2>
+            <div class="row">
+                <!-- Plan 1 -->
+                <div class="col-md-4">
+                    <article class="card shadow p-3">
+                        <h5>₹299 Plan</h5>
+                        <p>2GB/day, 28 days</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary ms-5 me-2" data-bs-toggle="modal" data-bs-target="#plan1Modal">
+                                More details
+                            </button>
+                            <a href="payment.html">
+                                <button class="btn btn-success me-5">Recharge Now</button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Plan 2 -->
+                <div class="col-md-4">
+                    <article class="card shadow p-3">
+                        <h5>₹499 Plan</h5>
+                        <p>3GB/day, 56 days</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary ms-5 me-2" data-bs-toggle="modal" data-bs-target="#plan2Modal">
+                                More details
+                            </button>
+                            <a href="payment.html">
+                                <button class="btn btn-success me-5">Recharge Now</button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Categories Section -->
+        <section class="container mt-5 mb-5">
+            <h2 class="text-center mt-5 mb-4">Choose Your Plan</h2>
+            <div class="row g-4 mt-5 mb-5">
+                <!-- Popular Plans -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-star-fill text-danger fs-1"></i>
+                            <h5 class="card-title mt-3">Popular Plans</h5>
+                            <p class="card-text">Top-rated plans with the best value.</p>
+                            <a href="viewPlans.html#popular" class="btn btn-danger">Explore</a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Validity Plans -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calendar-check text-danger fs-1"></i>
+                            <h5 class="card-title mt-3">Validity Plans</h5>
+                            <p class="card-text">Long-term validity recharge options.</p>
+                            <a href="viewPlans.html#validity" class="btn btn-danger">Explore</a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Data Plans -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-wifi text-danger fs-1"></i>
+                            <h5 class="card-title mt-3">Data Plans</h5>
+                            <p class="card-text">Get the best internet packs available.</p>
+                            <a href="viewPlans.html#data" class="btn btn-danger text-white">Explore</a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Unlimited Data -->
+                <div class="col-md-6 col-lg-3">
+                    <article class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-infinity text-danger fs-1"></i>
+                            <h5 class="card-title mt-3">Unlimited Data</h5>
+                            <p class="card-text">Best plans for unlimited browsing.</p>
+                            <a href="viewPlans.html#unlimited" class="btn btn-danger">Explore</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container mt-5 mb-5">
+            <h2 class="text-center text-warning">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How can I recharge my mobile?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">You can recharge your mobile through our website using UPI, bank transfer, or credit/debit card.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What are the payment options?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse">
+                        <div class="accordion-body">We support UPI, Net Banking, and Debit/Credit cards.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-warning text-dark pt-4">
+        <div class="container">
+            <div class="row text-center text-md-start gy-3">
+                <div class="col-md-6 col-lg-3">
+                    <h3 class="fw-bold">Mobi Comm</h3>
+                    <p>Quick and secure mobile recharge platform</p>
+                    <p><strong>Call:</strong> 0987654321</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="dashboard.html" class="text-dark d-block">Home</a></li>
+                        <li><a href="viewPlans.html" class="text-dark d-block">Plans</a></li>
+                        <li><a href="support.html" class="text-dark d-block">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h4>Support</h4>
+                    <ul class="list-unstyled">
+                        <li class="d-block">Help Center</li>
+                        <li class="d-block">Contact Us</li>
+                        <li class="d-block">FAQs</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h4>Connect With Us</h4>
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> support@mobicomm.com</li>
+                        <li><strong>Phone:</strong> +91 98765 43210</li>
+                        <li><strong>Live Chat:</strong> Available 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="d-md-flex justify-content-between text-center py-2">
+                <p class="mb-2 mb-md-0">2023 © Mobi Comm. All Rights Reserved.</p>
+                <p>
+                    <a href="#" class="text-dark me-3">Terms of Use</a>
+                    <a href="#" class="text-dark">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Scripts -->
+    <script>
+        // Script for search placeholder scroll
+        let placeholderText = "Search for popular Plan  |  Unlimited Plan | Validity Plan | ";
+        let currentIndex = 0;
+
+        function scrollPlaceholder() {
+            let inputField = document.getElementById("scrollingPlaceholder");
+            inputField.placeholder = placeholderText.substring(currentIndex) + placeholderText.substring(0, currentIndex);
+            currentIndex = (currentIndex + 1) % placeholderText.length;
+        }
+
+        setInterval(scrollPlaceholder, 300); // Speed of scrolling
+
+        // Script for profile icon redirect
+        function openProfile() {
+            window.location.href = "profile.html"; // Redirect to a profile page
+        }
+    </script>
+</body>
+</html>

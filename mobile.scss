@@ -1,0 +1,16 @@
+$primary:#FFA09B;
+$success: #FFA09B;
+$warning: #FFA09B;
+
+
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.body-item{
+  background-color:  #FFF0EE;
+}
+  
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
